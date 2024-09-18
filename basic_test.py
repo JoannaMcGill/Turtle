@@ -60,3 +60,5 @@ for steps in range(9):
         left(220)
         if abs(pos()) < 1:
             break
+
+
