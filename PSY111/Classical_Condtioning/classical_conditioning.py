@@ -4,7 +4,7 @@ import time
 def greeting(win):
     greeting = Text(Point(250,150), "Hello!")
     greeting.draw(win)
-    message = Text(Point(250,250), "This is a Classical Conditioning experiment\n. You will be asked how you feel when you look at certain artworks.\n You will answer on a scale of 1-5.\n More instructions will be provided when relevant.\n\n\nIf you wish to continue hit the next button.")
+    message = Text(Point(250,250), "You will be asked how you feel when you look at certain artworks.\n You will answer on a scale of 1-5.\n More instructions will be provided when relevant.\n\n\nIf you wish to continue hit the next button.")
     message.draw(win)
 def clear_window(win, width, height):
     cover_screen = Rectangle(Point(0,0), Point(width,height))
@@ -54,7 +54,7 @@ def main():
     #gather responses to images to find ones with positive feedback
     clear_window(win, 500, 500)
     #display instructions
-    message = Text(Point(250,50), "Rate these artworks on a scale of 1-5.\n 1 is for the artwork makes you feel negative emotions\n3 is neutral\n 5 is the artwork makes you happy\nWhen your done hit the submit button")
+    message = Text(Point(250,50), "Rate these artworks on a scale of 1-5.\n 1 is for the artwork makes you feel negative emotions\n3 is neutral\n 5 is the artwork makes you feel positive emotions\nWhen your done hit the submit button")
     message.draw(win)
     #input boxes
     input_box1 =add_input_box(win,100,250,3)
