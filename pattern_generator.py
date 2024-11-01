@@ -48,6 +48,7 @@ for x in range(3):
     t.left(30)
 '''
 #square pattern
+'''
 t.pensize(10)
 for x in range(2):
     for repetitions in range(6):
@@ -58,6 +59,7 @@ for x in range(2):
                     break
         t.left(90)
     t.left(45)
+'''
 #star 1
 '''
 while True:
@@ -74,13 +76,20 @@ def curve():
         t.right(1) 
         t.forward(1) 
 
+
+
 def circle():
     for i in range(360): 
   
         # Defining step by step curve motion 
         t.right(1) 
         t.forward(1) 
+def circle(steps):
+    for i in range(360): 
   
+        # Defining step by step curve motion 
+        t.right(1) 
+        t.forward(steps) 
 # Defining method to draw a full heart 
 def heart(): 
   
@@ -106,6 +115,7 @@ def heart():
   
     # Ending the filling of the color 
     #t.end_fill() 
+
 #flower
 '''
 for repetitions in range(9):
@@ -124,10 +134,11 @@ t.pensize(15)
 for repetitions in range(8):
     circle()
     t.left(45)
-'''
+
 t.left(180)
 t.penup()
 t.forward(1000)
+'''
 #reset()
 #star 3
 '''
@@ -137,7 +148,64 @@ while True:
     if abs(t.pos()) < 1:
         break
 '''
-
+#long pattern circle cone
+'''
+for i in range(10):
+     #t.teleport(20,-75)
+     t.circle(5+i*5)
+     t.left(90)
+     t.forward(10)
+     t.right(90)
+'''
+#triangle
+'''
+for i in range(15):
+     t.forward(10+i*10)
+     t.left(120)
+'''
+#hexagon
+'''
+for i in range(30):
+     t.forward(10+(i/6)*15)
+     t.left(60)
+'''
+#long design chain of circles
+'''
+t.circle(20)
+for i in range(10):
+    t.forward(20)
+    t.circle(20)
+'''
+#long design, rectangles
+t.teleport(-80,-80)
+for i in range(7):
+    for j in range(3):
+        t.forward(50)
+        t.left(80)
+        t.forward(50)
+        t.left(80)
+        t.forward(50)
+        t.left(80)
+        t.forward(50)
+        t.left(80)
+        t.forward(30)
+        t.left(100)
+    '''
+    for j in range(2):
+        t.right(300)#right 20 = circle design, 280 zigzag
+        t.forward(30) 
+        t.forward(50)
+        t.left(80)
+        t.forward(50)
+        t.left(80)
+        t.forward(50)
+        t.left(80)
+        t.forward(50)  
+    '''
+t.penup()
+t.forward(200)
+t.right(90)
+t.forward(1000)
 ts = turtle.getscreen()
 
 ts.getcanvas().postscript(file="pattern2.eps")
@@ -172,9 +240,4 @@ num_steps = 5
 #turtle.penup()
 
 #0
-num = 0
-#1
 
-turtle.left(num)
-
-turtle.right(num)
